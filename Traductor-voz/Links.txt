@@ -1,0 +1,10 @@
+https://www.gradio.app/docs/gradio/audio
+https://www.warp.dev/
+https://www.assemblyai.com/
+https://openai.com/index/whisper/
+https://github.com/openai
+https://github.com/openai/whisper
+https://github.com/terryyin/translate-python
+https://elevenlabs.io/api
+https://elevenlabs.io/docs/api-reference/getting-started
+https://github.com/elevenlabs/elevenlabs-python

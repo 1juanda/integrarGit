@@ -39,7 +39,3 @@ web=gr.Interface(
     description="Traductor con IA"
 )
 web.launch()
-
-
-
-# Minuto 20   https://www.youtube.com/watch?v=pNtcTmCiXzw

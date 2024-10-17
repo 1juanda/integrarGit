@@ -1,0 +1,21 @@
+# https://www.youtube.com/watch?v=pNtcTmCiXzw
+name: Stats
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Setp Python
+        uses: actions/setup-python@v5 
+        with:
+          python-version: 'pypy3.11' 
+      - name: Run Script
+        run: python ./Traductor-voz/main2.py
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5

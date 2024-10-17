@@ -18,7 +18,7 @@ jobs:
   #           - commands: 'Comando 3'
   build:
     runs-on: ubuntu-latest
-    permissons:
+    permissions:
       contents: write
     steps: 
       - name: Checkout Repo

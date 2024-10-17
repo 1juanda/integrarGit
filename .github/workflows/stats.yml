@@ -4,18 +4,33 @@ on:
   push:
     branches:
       - main
+  # schedule:
+  #   - cron: "30 20 * * Mon"   
 
 jobs:
+  # strategy:
+  #       max-parallel: 3
+  #       fail-fast: false
+  #       matrix:
+  #         include:
+  #           - commands: 'Comando 1'
+  #           - commands: 'Comando 2'
+  #           - commands: 'Comando 3'
   build:
     runs-on: ubuntu-latest
+    permissons:
+      contents: write
     steps: 
       - name: Checkout Repo
         uses: actions/checkout@v4
       - name: Setp Python
         uses: actions/setup-python@v5 
         with:
-          python-version: 'pypy3.11' 
+          python-version: '3.11' 
       - name: Run Script
+        # run: ${{ matrix.commands }} Correr varios comandos 
         run: python ./Traductor-voz/main2.py
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: UpDate
